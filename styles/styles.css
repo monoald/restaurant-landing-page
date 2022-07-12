@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+/*---Variables---*/
+:root {
+  --background: #f9f9f9;
+  --font-color: #061923;
+  --secondary: #F75C03;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  color: var(--font-color);
+  background-color: var(--background);
+}
+.description {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 6% 10%;
+  display: grid;
+  gap: 34px;
+  z-index: 1;
+}
+.description::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(8, 37, 52, 1), rgba(8, 37, 52, 0.8), rgba(8, 37, 52, 0.6), rgba(8, 37, 52, 0.4));
+  background: linear-gradient(90deg, rgba(249, 249, 249, 0.5), rgba(249, 249, 249, 0.4), rgba(249, 249, 249, .3), rgba(249, 249, 249, 0.1));
+  content: "";
+  z-index: -1;
+}
+.description::after {
+  position: absolute;
+  width: 94%;
+  height: 84%;
+  margin-right: 6vw;
+  display: flex;
+  justify-self: flex-start;
+  align-self: center;
+  background-image: url('../assets/images/hero.webp');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  z-index: -2;
+}
+.description__title {
+  max-width: 180px;
+  font-size: 2.8rem;
+}
+.description__paragraph {
+  max-width: 260px;
+  font-size: 1.3rem;
+}
+.description__cta {
+  width: 126px;
+  height: 34px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  color: var(--background);
+  background-color: #F75C03;
+  cursor: pointer;
+}
+.description__cta .arrow {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-image: url('../assets/icons/arrow1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(90deg);
+}
+.social-media {
+  width: 76px;
+  height: 20px;
+  margin-left: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  gap: 8px;
+}
+.social-media__icon {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.social-media .facebook {
+  background-image: url('../assets/icons/facebook.svg');
+}
+.social-media .twitter {
+  background-image: url('../assets/icons/twitter.svg');
+}
+.social-media .instagram {
+  background-image: url('../assets/icons/instagram.svg');
+}
