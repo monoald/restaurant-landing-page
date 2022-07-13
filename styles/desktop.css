@@ -1,6 +1,15 @@
+/*---Header---*/
+.header {
+  height: 66px;
+  border-radius: 0 0 30px 30px;
+}
+
 /*---Description---*/
 .description {
   padding: 6% 15%;
+}
+.description::before {
+  background: var(--primariy-gradient-desktop);
 }
 .description::after {
   width: 85%;

@@ -1,0 +1,40 @@
+/*---Header---*/
+
+.header {
+  height: 44px;
+  padding: 0 10%;
+  grid-template-columns: 35% 65%;
+  background-color: #061923;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0px 2px 8px var(--shadow);
+}
+
+.menu {
+  display: none;
+}
+
+.header__title,
+.navbar {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: 0 0 0 0;
+}
+.header__title {
+  text-align: start;
+}
+.navbar {
+  height: 44px;
+  min-width: 180px;
+  max-width: 180px;
+  position:initial;
+  padding: 0;
+  justify-self: flex-end;
+  display: block;
+}
+.navbar .list {
+  min-width: 180px;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
