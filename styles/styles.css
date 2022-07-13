@@ -6,13 +6,30 @@
 }
 html {
   font-size: 62.5%;
+  background-color: var(--background);
 }
 
 /*---Variables---*/
 :root {
   --background: #f9f9f9;
+  --background-gradient: linear-gradient(90deg, rgba(249, 249, 249, 0.5), rgba(249, 249, 249, 0.4), rgba(249, 249, 249, .3), rgba(249, 249, 249, 0.1));
   --font-color: #061923;
   --secondary: #F75C03;
+  --shadow: rgba(24, 24, 29, 0.4);
+  --icon-facebook: url('../assets/icons/facebook.svg');
+  --icon-twitter: url('../assets/icons/twitter.svg');
+  --icon-instagram: url('../assets/icons/instagram.svg');
+}
+/*---Dark Mode---*/
+:root {
+  --background: #061923;
+  --background-gradient: linear-gradient(90deg, rgba(6, 25, 35, 1), rgba(6, 25, 35, 0.8), rgba(6, 25, 35, 0.6), rgba(6, 25, 35, 0.4));
+  --font-color: #f9f9f9;
+  --secondary: #F75C03;
+  --shadow: rgba(2, 4, 9, 0.8);
+  --icon-facebook: url('../assets/icons/facebook-dark-mode.svg');
+  --icon-twitter: url('../assets/icons/twitter-dark-mode.svg');
+  --icon-instagram: url('../assets/icons/instagram-dark-mode.svg');
 }
 
 .hero {
@@ -37,8 +54,7 @@ html {
   width: 100%;
   height: 100%;
   display: inline-block;
-  background: linear-gradient(90deg, rgba(8, 37, 52, 1), rgba(8, 37, 52, 0.8), rgba(8, 37, 52, 0.6), rgba(8, 37, 52, 0.4));
-  background: linear-gradient(90deg, rgba(249, 249, 249, 0.5), rgba(249, 249, 249, 0.4), rgba(249, 249, 249, .3), rgba(249, 249, 249, 0.1));
+  background: var(--background-gradient);
   content: "";
   z-index: -1;
 }
@@ -75,7 +91,7 @@ html {
   align-items: center;
   justify-content: space-between;
   font-size: 1.3rem;
-  color: var(--background);
+  color: #f9f9f9;
   background-color: #F75C03;
   cursor: pointer;
 }
@@ -106,13 +122,13 @@ html {
   cursor: pointer;
 }
 .social-media .facebook {
-  background-image: url('../assets/icons/facebook.svg');
+  background-image: var(--icon-facebook);
 }
 .social-media .twitter {
-  background-image: url('../assets/icons/twitter.svg');
+  background-image: var(--icon-twitter);
 }
 .social-media .instagram {
-  background-image: url('../assets/icons/instagram.svg');
+  background-image: var(--icon-instagram);
 }
 
 /*---Services---*/
@@ -124,8 +140,7 @@ html {
   margin-bottom: 66px;
   border-radius: 8px;
   text-align: center;
-  background-color: var(--background);
-  box-shadow: 0px 2px 8px rgba(24, 24, 29, 0.4);
+  box-shadow: 0px 2px 8px var(--shadow);
 }
 .subtitle {
   margin-bottom: 5%;
@@ -178,14 +193,14 @@ html {
   max-width: 180px;
   height: 100%;
   padding: 12% 4%;
-  box-shadow: 0px 2px 8px rgba(24, 24, 29, 0.1);
+  box-shadow: 0px 2px 8px var(--shadow);
   border-radius: 12px;
   transition: all .3s cubic-bezier(0,0,.5,1);
   cursor: pointer;
 }
 .grid__element:hover {
   transform: scale3d(1.06,1.06,1.06);
-  box-shadow: 0px 2px 8px rgba(24, 24, 29, 0.2);
+  box-shadow: 0px 2px 8px var(--shadow);
 }
 .name {
   font-size: 1.4rem;
